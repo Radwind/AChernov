@@ -91,13 +91,14 @@ for (i = 0; i<30; i++) console.log(callCounter());
 */ 
 
 function primeNum (n){
-  var flag = 0;
+  var maxPr=2;
   for (var i = 2; i<n; i++){
-     if (n%i===0) {
-       flag = 1
-     }
+    var flag = 0;
+    for (var j = 2; j<i; j++){
+     if (i%j===0) flag = 1
+    }
+    if (flag===0) maxPr=i
   } 
-  if (flag===0) return console.log(n)
-  else return console.log(n-1)
+  console.log(maxPr)
 }
-console.log(primeNum(+prompt("Enter a number")))
+primeNum(+prompt("Enter a number"))
