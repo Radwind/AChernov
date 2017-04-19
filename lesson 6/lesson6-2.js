@@ -90,22 +90,15 @@ startsWith(prompt("Enter phrase",""), prompt("Enter search query",""));
 */
 
 function repeatString(str, times){
-  var repeat = str
+  var repeat = "";
   
-  if (typeof times === 'number' &&
-    (times > 0)&&
-	(isFinite(times))&&
-    (times % 1 == 0)){
-        for(i=0; i<times; i++){
+  for(i=0; i<times; i++){
         repeat += str ;
-        }
-  
-        return repeat
+  };
+  return repeat;
   }
-  else if (times == 0) return ""
-  else return "Error"
-}
-repeatString("str", 9)
+
+console.log(repeatString("str", 15));
 
 /*7. reversit
 Напишите функцию reversit(str), которая переворачивает строку str. 
